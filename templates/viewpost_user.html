@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+   <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='mainpage.css')}}">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+   <body>
+    <nav>
+        <div class="menu">
+          <div class="logo">
+            <a href="#">User space</a>
+          </div>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Feedback</a></li>
+          </ul>
+        </div>
+      </nav>
+    <div class="post">
+        <div class="title">Hi Mr.Author</div>
+        <div class="sub_title">View your post here</div>
+    </body>
+    <table border ="1px">
+        <tr>
+            <th>Author name</th>
+            <th>Blog Title</th>
+            <th>Description</th>
+           
+        </tr>
+        {%for i in ulist%}
+        <tr>
+            <td>{{i[1]}}</td>
+            <td>{{i[2]}}</td>
+            <td>{{i[3]}}</td>
+        </tr>
+        {%endfor%}
+
+
+
+    </table>
+
+
+
+
+    
+
+    
+ 
+
+</body>
+</html>

@@ -1,0 +1,34 @@
+<head>
+    <title>Details page</title>
+</head>
+
+<body>
+    <table border ="1px">
+        <tr>
+            <td>Name</td>
+            <td>City</td>
+            <td>Email</td>
+            <td>Password</td>
+            <td colspan="2">Action</td>
+           
+        </tr>
+        {%for i in ulist%}
+        <tr>
+            <td>{{i[0]}}</td>
+            <td>{{i[1]}}</td>
+            <td>{{i[2]}}</td>
+            <td>{{i[3]}}</td>
+            <td><a href="edit?email={{i[2]}}">edit</a></td>
+            <td><a href="delete?email={{i[2]}}">delete</a></td>
+        </tr>
+        {%endfor%}
+
+
+
+    </table>
+
+    
+    <a href="/">Home page</a><br>
+    <a href="/register">register page</a>
+
+</body>

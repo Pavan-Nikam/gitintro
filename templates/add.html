@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<!-- Created By CodingNepal - www.codingnepalweb.com -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+     <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='mainpage.css')}}">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+<body>
+  <div class="container1">
+    <div class="content1">
+      <div class="image-box">
+      </div>
+    <form action="/insertblog" method="post">
+      <div class="topic">Add new blog post</div>
+      <div class="input-box">
+        <input type="text" name="authorname" required>
+        <label>Author name</label>
+      </div>
+      <div class="input-box">
+        <input type="text" name="blogtitle" required>
+        <label>Blog Title</label>
+      </div>
+      <div class="input-box">
+        <input type="text" name="blogmsg" required>
+        <label>Blog</label>
+    
+        
+      </div>
+      <div class="input-box">
+        <input type="submit" value="Add Blog">
+      </div>
+    </form>
+  </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,537 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins',sans-serif;
+  
+  
+}
+
+html, body{
+  margin: 0%;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  place-items: top;
+  
+}
+
+/*-----------------indexpage end---------------------*/
+::selection{
+  color: #000;
+  background: #fff;
+}
+nav{
+  position: fixed;
+  background: #1b1b1b;
+  width: 100%;
+  padding: 10px 0;
+  z-index: 12;
+}
+nav .menu{
+  max-width: 1250px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+.menu .logo a{
+  text-decoration: none;
+  color: #fff;
+  font-size: 35px;
+  font-weight: 600;
+}
+
+.img{
+  background: url('download.jpg')no-repeat;
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+.img::before{
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.4);
+}
+.center{
+  position: absolute;
+  top: 52%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  padding: 0 20px;
+  text-align: center;
+}
+.center .title{
+  color: #fff;
+  font-size: 55px;
+  font-weight: 600;
+}
+.center .sub_title{
+  color: #fff;
+  font-size: 52px;
+  font-weight: 600;
+}
+
+.center .btns{
+height: 55px;
+width: 270px;
+border-radius: 5px;
+margin: 20px 40px;
+border: 2px solid white;
+font-size: 20px;
+font-weight: 500;
+padding: 12px 26px;
+cursor: pointer;
+text-decoration: none;
+display: inline-block;
+color: white;
+
+}
+
+
+
+/*---------x--------indexpage end----------x-----------*/
+
+/*------------------authorlogin--------------------*/
+
+
+body{
+  /*background: #1abc9c;*/
+  background: linear-gradient(-135deg, #71b7e6, #9b59b6);
+  overflow: hidden;
+  height: 100vh;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: scroll;
+  
+}
+::selection{
+  background: rgba(26,188,156,0.3);
+}
+.container{
+  max-width: 440px;
+  padding: 0 20px;
+  margin: 170px auto;
+}
+.wrapper{
+  width: 100%;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0px 4px 10px 1px rgba(0,0,0,0.1);
+}
+.wrapper .title{
+  height: 90px;
+  /*background: #16a085;*/
+  background: linear-gradient(-135deg, #71b7e6, #9b59b6);
+  border-radius: 5px 5px 0 0;
+  color: #fff;
+  font-size: 30px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.wrapper form{
+  padding: 30px 25px 25px 25px;
+}
+.wrapper form .row{
+  height: 45px;
+  margin-bottom: 15px;
+  position: relative;
+}
+.wrapper form .row input{
+  height: 100%;
+  width: 100%;
+  outline: none;
+  padding-left: 60px;
+  border-radius: 5px;
+  border: 1px solid lightgrey;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+form .row input:focus{
+  border-color: #16a085;
+  box-shadow: inset 0px 0px 2px 2px rgba(26,188,156,0.25);
+}
+form .row input::placeholder{
+  color: #999;
+}
+.wrapper form .row i{
+  position: absolute;
+  width: 47px;
+  height: 100%;
+  color: #fff;
+  font-size: 18px;
+  background: linear-gradient(-135deg, #71b7e6, #9b59b6);
+  border: 1px solid #16a085;
+  border-radius: 5px 0 0 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.wrapper form .pass{
+  margin: -8px 0 20px 0;
+}
+.wrapper form .pass a{
+  color: purple;
+  font-size: 17px;
+  text-decoration: none;
+}
+.wrapper form .pass a:hover{
+  text-decoration: underline;
+}
+.wrapper form .button input{
+  color: #fff;
+  font-size: 20px;
+  font-weight: 500;
+  padding-left: 0px;
+  /*background: #16a085;*/
+  background: linear-gradient(-135deg, #71b7e6, #9b59b6);
+  /*border: 1px solid #16a085;*/
+  border: 1px solid linear-gradient(-135deg, #71b7e6, #9b59b6);
+  cursor: pointer;
+}
+form .button input:hover{
+  /*background: #12876f;*/
+  background: linear-gradient(-135deg, #71b7e6, #9b59b6);
+  
+}
+.wrapper form .signup-link{
+  text-align: center;
+  margin-top: 20px;
+  font-size: 17px;
+}
+.wrapper form .signup-link a{
+  /*color: #16a085;*/
+  color: purple;
+  text-decoration: none;
+}
+form .signup-link a:hover{
+  text-decoration: underline;
+}
+
+
+/*----------x--------authorlogin end-----------x---------*/
+
+/*-----------------authorregistration-------------------------*/
+
+.container{
+  max-width: 700px;
+  width: 100%;
+  background-color: #fff;
+  padding: 25px 30px;
+  border-radius: 5px;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.15);
+}
+.container .title{
+  font-size: 25px;
+  font-weight: 500;
+  position: relative;
+}
+.container .title::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 30px;
+  border-radius: 5px;
+  background: linear-gradient(135deg, #71b7e6, #9b59b6);
+}
+.content form .user-details{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 20px 0 12px 0;
+}
+form .user-details .input-box{
+  margin-bottom: 15px;
+  width: calc(100% / 2 - 20px);
+}
+form .input-box span.details{
+  display: block;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+.user-details .input-box input{
+  height: 45px;
+  width: 100%;
+  outline: none;
+  font-size: 16px;
+  border-radius: 5px;
+  padding-left: 15px;
+  border: 1px solid #ccc;
+  border-bottom-width: 2px;
+  transition: all 0.3s ease;
+}
+.user-details .input-box input:focus,
+.user-details .input-box input:valid{
+  border-color: #9b59b6;
+}
+ 
+ form .button{
+   height: 45px;
+   margin: 35px 0
+ }
+ form .button input{
+   height: 100%;
+   width: 100%;
+   border-radius: 5px;
+   border: none;
+   color: #fff;
+   font-size: 18px;
+   font-weight: 500;
+   letter-spacing: 1px;
+   cursor: pointer;
+   transition: all 0.3s ease;
+   background: linear-gradient(135deg, #71b7e6, #9b59b6);
+ }
+ form .button input:hover{
+  /* transform: scale(0.99); */
+  background: linear-gradient(-135deg, #71b7e6, #9b59b6);
+  }
+
+
+
+/*-----------x------authorregistration end ---------------x------*/
+
+
+/*--------------add post------------------------------*/
+
+.container1{
+  z-index: 12;
+  max-width: 1050px;
+  width: 100%;
+  background: #fff;
+  border-radius: 12px;
+  margin: 0 20px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+  position: relative;
+  
+}
+.container1 .content1{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 25px 20px;
+  
+}
+
+.content1 .topic{
+  font-size: 22px;
+  font-weight: 500;
+  color: #ba24c2;
+}
+.content1 form{
+  width: 80%;
+  margin-right: 60px;
+  position: center;
+  
+  align-items: center;
+  justify-content: center;
+}
+.content1 .input-box{
+  height: 70px;
+  width: 100%;
+  margin: 16px 0;
+  position: relative;
+}
+.content1 .input-box input{
+  position: center;
+  height: 100%;
+  width: 100%;
+  border-radius: 6px;
+  font-size: 16px;
+  outline: none;
+  padding-left: 16px;
+  background: #fae9fb;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+.content1 .input-box input:focus,
+.content1 .input-box input:valid{
+  border-color: #ba24c2;
+  background-color: #fff;
+}
+.content1 .input-box label{
+  position: absolute;
+  left: 18px;
+  top: 50%;
+  color: #636c72;
+  font-size: 15px;
+  pointer-events: none;
+  transform: translateY(-50%);
+  transition: all 0.3s ease;
+}
+.content1 .input-box input:focus ~ label,
+.content1 .input-box input:valid ~ label{
+  top: 0;
+  left: 12px;
+  display: 14px;
+  color: #ba24c2;
+  background: #fff;
+}
+
+.content1 .input-box input[type="submit"]{
+  color: #fff;
+  background: #ba24c2;
+  padding-left: 0;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  
+}
+.content1 .input-box input[type="submit"]:hover{
+  background-color: #d43ddb;
+}
+/*--------------x----------addpost end -------------x------------*/
+
+
+.post{
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  padding: 0 20px;
+  text-align: top;
+}
+.post .title{
+  color: #fff;
+  font-size: 55px;
+  font-weight: 600;
+}
+.post .sub_title{
+  color: #fff;
+  font-size: 52px;
+  font-weight: 600;
+}
+
+/*-------------------viewpost table-----------------------*/
+
+
+table {
+  margin: 25px 0;
+  position: absolute;
+  left: 50%;
+  top: 60%;
+  transform: translate(-50%, -50%);
+  border-collapse: collapse;
+  width: 800px;
+  height: 100px;
+  border: 1px solid #bdc3c7;
+  
+  overflow:auto;
+  border-radius: 5px 5px 0 0;
+  
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  
+}
+
+tr{
+  background-color: rgb(206, 36, 206);
+  color: #ffffff;
+  text-align: left;
+  font-weight: bold;
+  border-bottom: 1px solid #f30b0b;
+  
+  
+}
+
+/*th,td{
+  text-align: center;
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}*/
+
+th,td{
+  padding: 12px 15px;
+  
+}
+
+
+
+tr:nth-of-type(even) {
+  background-color: #c46dec;
+}
+
+tr:last-of-type {
+  border-bottom: 2px solid red;
+}
+
+
+
+table td .btn{
+  /*color: #fff;*/
+  font-size: 20px;
+  font-weight: 500;
+  padding: 5px;
+  border-radius: 5px;
+  background: palevioletred;
+  cursor: pointer;
+  background-color: white;
+  color: black;
+  border: 3px solid #4CAF50; 
+  transition-duration: 0.4s;
+}
+
+table td .btn:hover {
+  background-color: #4CAF50; /* Green */
+  color: white;
+}
+nav{
+  position: fixed;
+  background: #1b1b1b;
+  width: 100%;
+  padding: 10px 0;
+  z-index: 12;
+}
+nav .menu{
+  max-width: 1250px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+.menu .logo a{
+  text-decoration: none;
+  color: #fff;
+  font-size: 35px;
+  font-weight: 600;
+}
+.menu ul{
+  display: inline-flex;
+}
+.menu ul li{
+  list-style: none;
+  margin-left: 7px;
+}
+.menu ul li:first-child{
+  margin-left: 0px;
+}
+.menu ul li a{
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 8px 15px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+.menu ul li a:hover{
+  background: #fff;
+  color: black;
+}
+/*--------x-----------viewpost table end-----------x------------*/
