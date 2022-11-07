@@ -1,16 +1,13 @@
 import pymysql as p
 
 
-def connect():
-    return p.connect(host="localhost",user="root",password="",database="pavan")
-
 def connecta():
-    return p.connect(host="localhost",user="root",password="",database="trial")
+    return p.connect(host="localhost",user="root",password="",database="bloggers")
 
 def insertu(t):
     con=connecta()
     cur=con.cursor()
-    sql="insert into sky4 values (%s,%s,%s,%s,%s)"
+    sql="insert into userdb values (%s,%s,%s,%s,%s)"
     cur.execute(sql,t)
     con.commit()
     con.close()
@@ -18,69 +15,17 @@ def insertu(t):
 def login_authu(e):
     con=connecta()
     cur=con.cursor()
-    sql= "SELECT * FROM sky4 WHERE a_email = %s"
+    sql= "select u_email,u_password from userdb where u_email=%s"
     cur.execute(sql,e)
     userlogu=cur.fetchall()
     con.commit()
     con.close()
     return userlogu
 
-def showdata():
-    con=connect()
-    cur=con.cursor()
-    sql="select * from emp"
-    cur.execute(sql)
-    data=cur.fetchall()
-    con.commit()
-    con.close()
-    return data
-
-
-def editdetails(e):
-    con=connect()
-    cur=con.cursor()
-    sql="select * from emp where email=%s"
-    cur.execute(sql,e)
-    userdetails=cur.fetchall()
-    con.commit()
-    con.close()
-    return userdetails
-
-
-def update(t):
-    con=connect()
-    cur=con.cursor()
-    sql="update emp set name=%s,city=%s,email=%s,pasword=%s where email=%s"
-    cur.execute(sql,t)
-    con.commit()
-    con.close()
-
-
-def drop(e):
-    con=connect()
-    cur=con.cursor()
-    sql="delete from emp where email=%s"
-    cur.execute(sql,e)
-    con.commit()
-    con.close()
-    
-
-def login_auth(e):
-    con=connect()
-    cur=con.cursor()
-    sql= "SELECT * FROM emp WHERE email = %s"
-    cur.execute(sql,e)
-    userlog=cur.fetchall()
-    con.commit()
-    con.close()
-    return userlog
-
-
-
 def inserta(t):
     con=connecta()
     cur=con.cursor()
-    sql="insert into sky1 values (%s,%s,%s,%s,%s)"
+    sql="insert into authordb values (%s,%s,%s,%s,%s)"
     cur.execute(sql,t)
     con.commit()
     con.close()
@@ -89,7 +34,7 @@ def inserta(t):
 def login_autha(e):
     con=connecta()
     cur=con.cursor()
-    sql= "SELECT * FROM sky1 WHERE a_email = %s"
+    sql= "select a_email,a_password from authordb where a_email=%s"
     cur.execute(sql,e)
     userloga=cur.fetchall()
     con.commit()
@@ -99,7 +44,7 @@ def login_autha(e):
 def insert_blog(t):
     con=connecta()
     cur=con.cursor()
-    sql="insert into sky3 values (%s,%s,%s,%s)"
+    sql="insert into blogdb values (%s,%s,%s)"
     cur.execute(sql,t)
     con.commit()
     con.close()
@@ -107,10 +52,46 @@ def insert_blog(t):
 def showpost():
     con=connecta()
     cur=con.cursor()
-    sql="select * from sky3"
+    sql="select * from blogdb"
     cur.execute(sql)
     datapost=cur.fetchall()
     con.commit()
     con.close()
-    print(datapost)
     return datapost
+
+def showpost1():
+    con=connecta()
+    cur=con.cursor()
+    sql="select * from blogdb"
+    cur.execute(sql)
+    datapost1=cur.fetchall()
+    con.commit()
+    con.close()
+    return datapost1
+
+def bdrop(e):
+    con=connecta()
+    cur = con.cursor()
+    sql = "delete from blogdb where p_title=%s"
+    cur.execute(sql,e)
+    con.commit()
+    con.close()
+
+def bupdate(t):
+    con=connecta()
+    cur = con.cursor()
+    sql = "update blogdb set p_uname=%s,p_title=%s,p_post=%s where p_title=%s"
+    cur.execute(sql,t)
+    con.commit()
+    con.close()
+    
+
+def beditdetails(t):
+    con = connecta()
+    cur = con.cursor()
+    sql = "select * from blogdb where p_title=%s"
+    cur.execute(sql,t)
+    blogdetails = cur.fetchall()
+    con.commit()
+    con.close()
+    return blogdetails

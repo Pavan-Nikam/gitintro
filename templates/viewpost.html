@@ -13,11 +13,8 @@
             <a href="#">Authors space</a>
           </div>
           <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Contact</a></li>
-            <li><a href="#">Feedback</a></li>
+            <li><a href="/authoradmin">Home</a></li>
+            <li><a href="/">Logout</a></li>
           </ul>
         </div>
       </nav>
@@ -27,19 +24,19 @@
     <table border ="1px">
 
                 <tr>
-                    <th>Author name</th>
-                    <th>Blog Title</th>
+                    <th>Name</th>
+                    <th>Title</th>
                     <th>Description</th>
                     <th colspan="2">Action</th>
                  
                 </tr>
                 {%for i in ulist%}
                 <tr>
+                    <td>{{i[0]}}</td>
                     <td>{{i[1]}}</td>
                     <td>{{i[2]}}</td>
-                    <td>{{i[3]}}</td>
-                    <td><a href="edit?email={{i[2]}}"><button class="btn">Edit</button></a></td>
-                    <td><a href="delete?email={{i[2]}}"><button class="btn">Delete</button></a></td>
+                    <td><a href="/bedit?Title={{i[1]}}"><button class="btn">Edit</button></a></td>
+                    <td><a href="bdelete?Title={{i[1]}}"><button class="btn">Delete</button></a></td>
                 </tr>
                 {%endfor%}
 

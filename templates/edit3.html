@@ -25,24 +25,24 @@
       </div>
       
       
-    <form action="/insertblog" method="post">
-      <div class="topic">Add new blog post</div>
+    <form action="/bupdatedata" method="post">
+      <div class="topic">Update blog post</div>
       <div class="input-box">
-        <input type="text" name="authorname" required>
+        <input type="text" name="Name" value="{{ t[0] }}" id="" required>
         <label>Author name</label>
       </div>
       <div class="input-box">
-        <input type="text" name="blogtitle" required>
+        <input type="text" name="Title" value="{{ t[1] }}" id="" required>
         <label>Blog Title</label>
       </div>
       <div class="input-box">
-        <input type="text" name="blogmsg" required>
+        <input type="text" name="Description" value="{{ t[2] }}" id="" required>
         <label>Blog</label>
     
         
       </div>
       <div class="input-box">
-        <input type="submit" value="Add Blog">
+        <input type="submit" value="Update Blog">
       </div>
     </form>
   </div>

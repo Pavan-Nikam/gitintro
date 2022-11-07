@@ -52,27 +52,23 @@ def insertdata_user():
     return render_template("userlogin.html")
 
 
-@app.route("/edit")
-def edit():
-    email=request.args.get("email")
-    data=editdetails(email)
-    return render_template("edit.html",t=data[0])
 
-@app.route("/updatedata",methods=["post"])
-def updatedate():
-    name=request.form["username"]
-    city=request.form["usercity"]
-    email=request.form["useremail"]
-    password=request.form["userpassword"]
-    t=(name,city,email,password,email)
-    update(t)
-    return redirect("/details")
 
-@app.route("/delete")
-def delete():
-    email=request.args.get("email")
-    drop(email)
-    return redirect("/details")
+#@app.route("/updatedata",methods=["post"])
+#def updatedate():
+ #   name=request.form["username"]
+  #  city=request.form["usercity"]
+   # email=request.form["useremail"]
+    #password=request.form["userpassword"]
+   # t=(name,city,email,password,email)
+   # update(t)
+    #return redirect("/details")
+
+#@app.route("/delete")
+#def delete():
+#    email=request.args.get("email")
+#   drop(email)
+#    return redirect("/details")
 
 @app.route("/login")
 def login():
@@ -82,13 +78,9 @@ def login():
 def login_validation_user():
     email=request.form["useremail"]
     password=request.form["userpassword"]
-    dataa=login_authu(email)
-    print(dataa)
-    femail=(dataa[0][3])
-    fpassword=(dataa[0][4])
-
-    
-    if (email==femail) and (password==fpassword):
+    dataa=(email,password)
+    data1=login_authu(email)
+    if dataa in data1:
         return redirect("/viewpost_user")
     else:
         return render_template("userregister.html")
@@ -108,37 +100,62 @@ def insertdata_author():
 def login_validation_author():
     email=request.form["useremail"]
     password=request.form["userpassword"]
-    dataa=login_autha(email)
-    print(dataa)
-    femail=(dataa[0][3])
-    fpassword=(dataa[0][4])
-    
-    if (email==femail) and (password==fpassword):
+    dataa=(email,password)
+    data1=login_autha(email)
+    if dataa in data1:
         return render_template("authoradmin.html")
     else:
-        return render_template("home.html")
-
+        return render_template("userregister.html")
 
 @app.route("/insertblog",methods=["post"])
 def insertblog():
     aname=request.form["authorname"]
     title=request.form["blogtitle"]
     msg=request.form["blogmsg"]
-    t=(id,aname,title,msg)
+    t=(aname,title,msg)
     insert_blog(t)
-    return render_template("authorlogin.html")
+    return redirect("/viewpost")
 
 @app.route("/viewpost")
 def viewpost():
     da=showpost()
-    print(da)
     return render_template("viewpost.html",ulist=da)
+
+@app.route("/viewpost1")
+def viewpost1():
+    da=showpost1()
+    return render_template("edit1.html",ulist=da)
 
 @app.route("/viewpost_user")
 def viewpost_user():
     da=showpost()
-    print(da)
     return render_template("viewpost_user.html",ulist=da)
+
+@app.route("/bdelete")
+def bdelete():
+    name = request.args.get('Title')
+    bdrop(name)
+    return redirect("/viewpost")
+
+@app.route("/bedit")
+def bedit():
+    name=request.args.get("Title")
+    data = beditdetails(name)
+    print(data)
+    return render_template("edit3.html",t=data[0])
+
+@app.route('/bupdatedata',methods=['post'])
+def bupdatedata():
+    name = request.form['Name']
+    title = request.form['Title']
+    blog = request.form['Description']
+    print(name)
+    t=(name,title,blog,title)
+    print(t)
+    bupdate(t)
+    return redirect('/viewpost')
+
+
 
 if __name__=='__main__':
     app.run(debug=True)

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='mainpage.css')}}">
+    <title>Home</title>
+</head>
+
+<body>
+    <section id="login">
+        <header>
+            <!-- <a href="#"><img src="images/logo1.png" alt=""></a> -->
+            <h4>BOOK FACTORY</h4>
+            <ul id="menu">
+                <li><b><a href="/">Home</a></b></li>
+                <li><b><a href="/viewpost">User Home</a></b></li>
+            </ul>
+        </header>
+
+            <h2>BLOGS</h2>
+            <table>                
+                {% for i in blist %}
+                <tr>
+                    <td><b>Name</b>  {{ i[0] }} 
+                
+                    <br><br><b>Title</b>  {{ i[1] }}
+                
+                    <br><br><b>Description</b>  {{ i[2] }}</td>
+                </tr>
+                
+                {% endfor %}
+            </table>
+            
+        </section>
+
+</body>
+
+</html>

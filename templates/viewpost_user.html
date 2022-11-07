@@ -13,18 +13,14 @@
             <a href="#">User space</a>
           </div>
           <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Contact</a></li>
-            <li><a href="#">Feedback</a></li>
+            <li><a href="/">Logout</a></li>
           </ul>
         </div>
       </nav>
-    <div class="post">
+    <!--<div class="post">
         <div class="title">Hi Mr.Author</div>
         <div class="sub_title">View your post here</div>
-    </body>
+    </body>-->
     <table border ="1px">
         <tr>
             <th>Author name</th>
@@ -34,9 +30,9 @@
         </tr>
         {%for i in ulist%}
         <tr>
+            <td>{{i[0]}}</td>
             <td>{{i[1]}}</td>
             <td>{{i[2]}}</td>
-            <td>{{i[3]}}</td>
         </tr>
         {%endfor%}
 
